@@ -13,20 +13,14 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   response.render('pages/index');
+  app.use(express.bodyParser());
+  app.post('/', function(req, res) {
+    console.log(req.body);
+    res.send(200);
+  });
 });
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-
-var http = require('http');
-var server = http.createServer(app);
-
-app.use(express.bodyParser());
-app.post('/', function(req, res) {
-  console.log(req.body);
-  res.send(200);
-});
-
-server.listen(process.env.PORT, process.env.IP);
+r 
