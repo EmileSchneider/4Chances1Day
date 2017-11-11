@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include ../partials/header.ejs %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,7 +16,22 @@
 
 </head>
 <body>
-  <% include ../partials/nav.ejs %>
-      
+  <div class="container">
+    <% include ../partials/nav.ejs %>
+    <div class="row">
+      <div class="col-lg-3">
+        <% include ../partials/item.ejs %>
+      </div>
+      <div class="col-lg-3">
+        <% include ../partials/item.ejs %>
+      </div>
+      <div class="col-lg-3">
+        <% include ../partials/item.ejs %>
+      </div>
+      <div class="col-lg-3">
+        <% include ../partials/item.ejs %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
